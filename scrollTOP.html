@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>返回顶部</title>
+  <style>
+    * { margin: 0; padding: 0;}
+    .box { text-align: center; line-height: 60px;}
+    .box p:hover { color: #ef9a19; cursor: pointer;}
+    .scrolltop { width: 55px; height: 102px; background: url(img/top.png) no-repeat; background-position: 0 0; position: fixed; right: 20px; top: 75%; display: none; cursor: pointer;}
+  </style>
+</head>
+<body>
+<div class="box">
+  <p>每一次轻易的放弃，都是人生的一处败笔! ---- [2016-10-21]</p>
+  <p>世上三件事：一是自己的事，二是别人的事，三是老天爷的事! ---- [2016-10-08] </p>
+  <p>一个从未犯错的人是因为他不曾尝试新鲜事物。 ---- [2016-10-01]</p>
+  <p>人生都是走着走着就开阔了，现在的你，不用着急! ---- [2016-09-23]</p>
+  <p>成长是一个孤立无援的过程，你必须学会独当一面！ ---- [2016-09-03]</p>
+  <p>最幸福的是，早安后的早餐和晚餐后的晚安 ---- [2016-08-14]</p>
+  <p>成功的背后一定有许多人在有意或无意识地帮助你 ---- [2016-07-24]</p>
+  <p>世上有很多不可能，不过不要在你未尽全力之前下结论! ---- [2016-07-10]</p>
+  <p>青春有两条路，一条是必须走，一条是想走! ---- [2016-07-09]</p>
+  <p>一个人，一本书，一盏茶，在那些淡若轻痕的乐曲中 ---- [2016-07-07]</p>
+  <p>现在事，现在心，随缘即可；未来事，未来心，何须劳心 ---- [2016-06-09]</p>
+  <p>你要堕落，神仙也救不了； 你要成长，绝处也能逢生。 ---- [2016-05-14]</p>
+  <p>男人的帅不在脸蛋，而在岁月积淀下来的睿智与淡定 ---- [2016-04-24]</p>
+  <p>当你感到迷茫的时候，请你抬头看看天边的阳光 ---- [2016-04-07]</p>
+  <p>时间，让深的感情越来越深，让浅的感情越来越浅。 ---- [2016-04-04]</p>
+  <p>你现在所渴望的，就是你现在需求的。 ---- [2016-03-27]</p>
+  <p>只有学会选择和懂得放弃才能彻悟人生。 ---- [2016-03-26]</p>
+  <p>决定你人生高度的，不是你的才能，而是你的态度。 ---- [2016-03-19]</p>
+  <p>我愿意，用一辈子的桃花运，来换一个对的人。 ---- [2016-02-26]</p>
+  <p>有人说，人生有两杯必喝之水，一杯是苦水，一杯是甜水，没有人能回避得了。区别不过是不同的人喝甜水和喝苦水的顺序不同，成功者往往先喝苦水，再喝甜水；而一般人都是先喝甜水，再喝苦水。——《永不放弃》 ---- [2016-01-11]</p>
+  <p>人生是一场一个人的旅程，无人可替代。总有人离开，总有人到来。 ---- [2016-01-06]</p>
+  <p>什么是人生里关键性的一刻，是一个决定；是一次选择；是向左，还是向右；是继续，或者放弃；是跟过去告别的一刻；是勇敢擦拭伤口的那一刻；是抉择未来的那一刻。要开心，先要“开”心。 ---- [2014-09-06]</p>
+  <p>一个成熟的人往往发觉可以责怪的人越来越少，人人都有他的难处。 ---- [2014-08-06]</p>
+  <p>虽然最好的时光，总是特别短，但曾有过的感动，我们都会记得。 ---- [2015-07-06]</p>
+</div>
+<div class="scrolltop"></div>
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function() {
+
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 200){
+        $('.scrolltop').fadeIn();
+        $('.scrolltop').css({'backgroundPosition': '0 0', 'top': '75%'});
+        // $('.scrolltop').css({'bottom': '20px'});
+      }else{
+        $('.scrolltop').fadeOut();
+        $('.scrolltop').css({'backgroundPosition': '-61px 0'});
+      }
+    });
+
+    $('.scrolltop').click(function() {
+      $('html,body').animate({scrollTop: 0},500);
+      $(this).stop(true).animate({top: '-20%'},1000).css({'backgroundPosition': '-61px 0'});
+    });
+
+  });
+</script>
+</body>
+</html>

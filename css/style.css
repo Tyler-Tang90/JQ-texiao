@@ -1,0 +1,64 @@
+*{margin: 0; padding: 0;}
+body{ font-family: "microsoft yahei", "微软雅黑",Helvetica,Arial,sans-serif; font-size: 12px; margin: 0; padding:0; background-color: #fff; color:#666; text-align: center;}
+a { text-decoration: none;}
+a:hover { color: #2bb8aa;}
+.cf {*zoom:1;}
+.cf:after { content:""; display:table; clear:both;}
+.cs {display:table;}
+ul,li { margin: 0; padding: 0; list-style-type: none;}
+input { width: 100px; height: 30px; text-align: center; border: none; background: #2bb8aa; color: #fff; outline: none; cursor: pointer;}
+.fl { float: left;}
+.fr { float: right;}
+
+.category { margin:30px auto 0; width: 1165px; padding-bottom: 30px;}
+.category .category-tit { width: 100%; height: 30px; margin-bottom: 12px; background: url(../img/ico1.jpg) no-repeat left center;}
+.category .category-tit i { font-style: normal; font-size: 20px; color: #666; float: left; margin-left: 45px; display: inline-block; float: left; line-height: 30px;}
+.category .category-tit .sub-cate { float: right; line-height: 30px;}
+.category .category-tit .sub-cate a { color: #666; text-decoration: none; padding:0 10px; border-right: 1px solid #ddd;}
+.category .category-tit .sub-cate a:hover { color: #2bb8aa;}
+.category .c-list { border-top: 1px solid #eee; border-left: 1px solid #eee;}
+.category .c-list li { float: left; width: 290px; height: 310px; border-right: 1px solid #eee; border-bottom: 1px solid #eee;}
+.category .c-list li img { width: 260px; height: 154px; padding: 12px 15px 0;}
+.category .c-list li .deal-title { text-align: left; margin-top: 12px; padding: 0 15px 5px;}
+.category .c-list li .deal-title .xtitle { display: block; font-size: 14px; color: #666;}
+.category .c-list li .deal-title .short-title { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #999; font-weight: 400;}
+.category .c-list li .deal-title a:hover { color: #2bb8aa;}
+.category .c-list li .deal-detail { text-align: left; margin-bottom: 10px; padding: 0 15px; height: 24px;}
+.category .c-list li .deal-detail .price { font-size: 20px; color: #f76120; margin-right: 10px;}
+.category .c-list li .deal-detail .price strong {font-weight: 400;}
+.category .c-list li .deal-detail .value { font-size: 12px;}
+.category .c-list li .deal-detail .value .num { text-decoration: line-through;;}
+.category .c-list li .deal-detail .sales { float: right; margin-top: 8px; font-size: 12px; font-weight: 400; color: #999;}
+
+/*左边图片链接*/
+.left{ position: fixed; width: 50px; height: 250px; left: 0; top: 50px; margin-top: 125px; z-index: 999;}
+.left a { display: inline-block; width: 50px; height: 50px; float:left; text-align: right;}
+.con1 {background: #305790;}
+.con2 {background: #2BA9D2;}
+.con3 {background: #CF4C3A;}
+.con4 {background: #4698CA;}
+.con5 {background: #F9694E;}
+/*导航翻滚效果*/
+.nav-list { margin: 48px auto 0; width: 720px;}
+.nav-list li { float: left; overflow: hidden;}
+.nav-list li a { display: block; color: #fff; width: 120px; height: 48px; font-size: 14px; font-weight: bold; line-height: 48px; text-align: center; position:relative;}
+.nav-list li a span{ position: absolute; display:inline-block; width: 120px; left: 0;}
+.show{ background: url(../img/nav_hover.jpg) repeat-x; top: -48px; display: none;}
+.hover{ top: 0; background: url(../img/nav_bg.jpg) repeat-x;}
+
+/*仿制京东导航*/
+.jd-nav { margin: 20px auto 0; width: 810px; height: 40px; background: #444348; position: relative;}
+.jd-nav-left { width: 210px; height: 40px; line-height: 40px; position: relative; color: #fff; text-align: left; cursor: pointer; background: #CD292B;}
+.subnav { line-height: 40px; padding-left: 20px; font-size: 16px;}
+.subnav .arow { font-style: normal; display: inline-block; width: 20px; height: 20px; position: absolute; top: 10px; right: 10px; background: url(../img/arrow.gif) no-repeat; background-position: 0 0;}
+#subnav { position: absolute; top:40px; border: 2px solid #CD292B; border-top: none; width: 206px; background-color: #fafafa; padding: 10px 0; display: none; z-index: 99;}
+.item { width: 200px; padding: 0 0 0 6px; text-align: left; border-bottom: 1px solid #fff; border-top: 1px solid #fafafa;}
+.item a { color: #333; text-decoration: none; font-size: 14px; display: inline-block;}
+.item:hover { background: #fff; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 2px solid #fff;}
+.item a:hover { color: #CD292B;}
+.item .item-nav { display: none; position: absolute; left: 207px; border: 1px solid #ccc; border-left: none; top: 0; width: 500px; height: 314px; background: #fff; z-index: 88; color: #f00; font-size: 30px; text-align: center;}
+
+.jd-nav-right { width: 600px; height: 40px; line-height: 40px;}
+.jd-nav-right li { float: left;}
+.jd-nav-right li a { display: block; color: #fff; font-size: 16px; padding: 0 30px;}
+.jd-nav-right li a:hover { background: #ef9a19;}

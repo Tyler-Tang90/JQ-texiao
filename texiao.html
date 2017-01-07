@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery 特效</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 左边图片链接 -->
+<div class="left">
+  <a href="http://www.tangwei90.com/index.html" target="_blank" class="con1"><img src="img/tan01.jpg"></a>
+  <a href="http://www.tangwei90.com/index.html" target="_blank" class="con2"><img src="img/tan02.jpg"></a>
+  <a href="http://www.tangwei90.com/index.html" target="_blank" class="con3"><img src="img/tan03.jpg"></a>
+  <a href="http://www.tangwei90.com/index.html" target="_blank" class="con4"><img src="img/tan04.jpg"></a>
+  <a href="http://www.tangwei90.com/index.html" target="_blank" class="con5"><img src="img/tan05.jpg"></a>
+</div>
+<!-- 导航翻滚效果 -->
+<div class="nav-list">
+  <ul class="cf">
+    <li>
+      <a href="http://www.tangwei90.com/index.html" target="_blank">
+        <span class="show">首 页</span><span class="hover">首 页</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.tangwei90.com/diary.html" target="_blank">
+        <span class="show">日 记</span><span class="hover">日 记</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.tangwei90.com/albums.html" target="_blank">
+        <span class="show">相 册</span><span class="hover">相 册</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.tangwei90.com/timeline.html" target="_blank">
+        <span class="show">时间轴</span><span class="hover">时间轴</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.tangwei90.com/seo.html" target="_blank">
+        <span class="show">优 化</span><span class="hover">优 化</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://www.tangwei90.com/case.html" target="_blank">
+        <span class="show">案 例</span><span class="hover">案 例</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- 仿制京东导航 -->
+<div class="jd-nav cf">
+  <div class="jd-nav-left fl">
+    <div class="subnav">全部分类<i class="arow"></i></div>
+    <div id="subnav">
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容1</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容2</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容3</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容4</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容5</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容6</div>
+      </div>
+      <div class="item">
+        <a href="#">图书</a>、<a href="#">音像</a>、<a href="#">数字商品</a>
+        <div class="item-nav">导航内容7</div>
+      </div>
+    </div>
+  </div>
+  <div class="jd-nav-right fr">
+    <ul>
+      <li><a href="http://www.tangwei90.com/index.html" target="_blank">首 页</a></li>
+      <li><a href="http://www.tangwei90.com/diary.html" target="_blank">日 记</a></li>
+      <li><a href="http://www.tangwei90.com/albums.html" target="_blank">相 册</a></li>
+      <li><a href="http://www.tangwei90.com/timeline.html" target="_blank">时间轴</a></li>
+      <li><a href="http://www.tangwei90.com/seo.html" target="_blank">优 化</a></li>
+      <li><a href="http://www.tangwei90.com/case.html" target="_blank">案 例</a></li>
+    </ul>
+  </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+// 左边图片链接
+  $(function() {
+    $('.left a').hover(function() {
+      $(this).stop().animate({width: 65},400);
+    },function() {
+      $(this).stop().animate({width: 50},400);
+    });
+  });
+//导航翻滚效果
+  $(function(){
+    $(".nav-list li a").hover(function() {
+        $(".hover",this).stop().animate({'top':'48px'},300);
+        $(".show",this).css('display','block');
+        $(".show",this).stop().animate({'top':'0px'},300);
+    },function() {
+        $(".hover").stop().animate({'top':'0px'},300);
+        $(".show").stop().animate({'top':'-48px'},300);
+    });
+  });
+// 仿制京东导航
+  $(function() {
+
+    $('.jd-nav-left').hover(function() {
+      $('.arow').css({'backgroundPosition': '0 -20px'});
+      $('#subnav').stop(true).slideDown();
+    },function() {
+      $('.arow').css({'backgroundPosition': '0 0'});
+      $('#subnav').stop(true).slideUp();
+    });
+
+    $('.item').hover(function() {
+      $('.item-nav',this).css({'display': 'block'});
+      $('#subnav').css({'borderRight': '1px solid #ccc'});
+    },function() {
+      $('.item-nav').css({'display': 'none'});
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
